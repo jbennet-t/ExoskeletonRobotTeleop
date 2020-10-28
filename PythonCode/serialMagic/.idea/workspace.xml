@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e41aedd-914d-461e-bf11-3b27987c9bc8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bVWPGXi2V8gEl71wKRcPaoSri0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/serialArduinoCom3.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sinow\Documents\Python\serialMagic" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.serialArduinoCom3">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="serialMagic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\sinow\Documents\Python\serialMagic\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="serialArduinoCom1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="serialMagic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\sinow\Documents\Python\serialMagic\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serialArduinoCom1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="serialArduinoCom2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="serialMagic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\sinow\Documents\Python\serialMagic\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serialArduinoCom2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="serialArduinoCom3" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="serialMagic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\sinow\Documents\Python\serialMagic\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serialArduinoCom3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.serialArduinoCom1" />
+      <item itemvalue="Python.serialArduinoCom2" />
+      <item itemvalue="Python.serialArduinoCom3" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e41aedd-914d-461e-bf11-3b27987c9bc8" name="Default Changelist" comment="" />
+      <created>1588717715858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588717715858</updated>
+      <workItem from="1588717737848" duration="5485000" />
+      <workItem from="1589068232211" duration="951000" />
+      <workItem from="1589070240667" duration="818000" />
+      <workItem from="1589071087537" duration="1527000" />
+      <workItem from="1589251053486" duration="2287000" />
+      <workItem from="1589370610217" duration="5000" />
+      <workItem from="1591141500744" duration="792000" />
+      <workItem from="1602429724946" duration="731000" />
+      <workItem from="1602636685534" duration="8000" />
+      <workItem from="1603581636057" duration="7432000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2391" y="62" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603585773232">
+      <screen x="1982" y="-124" width="1858" height="1200" />
+    </state>
+    <state x="2391" y="62" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/82.0.1454.864/3902.-114.1858.1080/1982.-124.1858.1200@1982.-124.1858.1200" timestamp="1603585773232" />
+    <state x="3074" y="244" key="FileChooserDialogImpl" timestamp="1603585767142">
+      <screen x="1982" y="-124" width="1858" height="1200" />
+    </state>
+    <state x="3074" y="244" key="FileChooserDialogImpl/82.0.1454.864/3902.-114.1858.1080/1982.-124.1858.1200@1982.-124.1858.1200" timestamp="1603585767142" />
+    <state x="2551" y="133" key="com.intellij.ide.util.TipDialog" timestamp="1603581692165">
+      <screen x="1982" y="-124" width="1858" height="1200" />
+    </state>
+    <state x="2551" y="133" key="com.intellij.ide.util.TipDialog/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@1982.-124.1858.1200" timestamp="1602636689183" />
+    <state x="2551" y="133" key="com.intellij.ide.util.TipDialog/82.0.1454.864/3902.-114.1858.1080/1982.-124.1858.1200@1982.-124.1858.1200" timestamp="1603581692165" />
+  </component>
+</project>
