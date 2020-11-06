@@ -30,7 +30,7 @@
       <recent name="C:\Users\sinow\Documents\Python\serialMagic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.serialArduinoCom3">
+  <component name="RunManager" selected="Python.serialArduinoCom4">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="serialMagic" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,6 +76,9 @@
       <module name="serialMagic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="C:\Users\sinow\Documents\Python\serialMagic\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -110,8 +113,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="serialArduinoCom4" type="PythonConfigurationType" factoryName="Python">
+      <module name="serialMagic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\sinow\Documents\Python\serialMagic\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serialArduinoCom4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.serialArduinoCom1" />
+      <item itemvalue="Python.serialArduinoCom4" />
       <item itemvalue="Python.serialArduinoCom2" />
       <item itemvalue="Python.serialArduinoCom3" />
     </list>
@@ -135,7 +158,8 @@
       <workItem from="1591141500744" duration="792000" />
       <workItem from="1602429724946" duration="731000" />
       <workItem from="1602636685534" duration="8000" />
-      <workItem from="1603581636057" duration="7432000" />
+      <workItem from="1603581636057" duration="8090000" />
+      <workItem from="1604692028578" duration="3220000" />
     </task>
     <servers />
   </component>
@@ -143,18 +167,55 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2391" y="62" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603585773232">
-      <screen x="1982" y="-124" width="1858" height="1200" />
+    <state x="402" y="134" width="855" height="530" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604693447094">
+      <screen x="82" y="0" width="1454" height="864" />
     </state>
+    <state x="402" y="134" width="855" height="530" key="#com.intellij.execution.impl.EditConfigurationsDialog/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693447094" />
     <state x="2391" y="62" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/82.0.1454.864/3902.-114.1858.1080/1982.-124.1858.1200@1982.-124.1858.1200" timestamp="1603585773232" />
     <state x="3074" y="244" key="FileChooserDialogImpl" timestamp="1603585767142">
       <screen x="1982" y="-124" width="1858" height="1200" />
     </state>
     <state x="3074" y="244" key="FileChooserDialogImpl/82.0.1454.864/3902.-114.1858.1080/1982.-124.1858.1200@1982.-124.1858.1200" timestamp="1603585767142" />
-    <state x="2551" y="133" key="com.intellij.ide.util.TipDialog" timestamp="1603581692165">
-      <screen x="1982" y="-124" width="1858" height="1200" />
+    <state width="1411" height="277" key="GridCell.Tab.0.bottom" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.0.bottom/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.0.center" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.0.center/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.0.left" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.0.left/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.0.right" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.0.right/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.1.bottom" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.1.bottom/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.1.center" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.1.center/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.1.left" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.1.left/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state width="1411" height="277" key="GridCell.Tab.1.right" timestamp="1604693140720">
+      <screen x="82" y="0" width="1454" height="864" />
+    </state>
+    <state width="1411" height="277" key="GridCell.Tab.1.right/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604693140720" />
+    <state x="527" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1604692028941">
+      <screen x="82" y="0" width="1454" height="864" />
     </state>
     <state x="2551" y="133" key="com.intellij.ide.util.TipDialog/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@1982.-124.1858.1200" timestamp="1602636689183" />
+    <state x="527" y="185" key="com.intellij.ide.util.TipDialog/82.0.1454.864/1982.-124.1858.1200/3902.-114.1858.1080@82.0.1454.864" timestamp="1604692028941" />
     <state x="2551" y="133" key="com.intellij.ide.util.TipDialog/82.0.1454.864/3902.-114.1858.1080/1982.-124.1858.1200@1982.-124.1858.1200" timestamp="1603581692165" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/serialMagic$serialArduinoCom1.coverage" NAME="serialArduinoCom1 Coverage Results" MODIFIED="1604693130387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

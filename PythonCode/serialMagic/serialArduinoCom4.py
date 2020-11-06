@@ -10,6 +10,7 @@
 
 
 import serial
+import time
 
 ser = serial.Serial('COM5', baudrate=9600)
 ser.flushInput() # clears queue so that data doesn't overlap
