@@ -7,9 +7,12 @@ import thread
 import serial
 from naoqi import ALProxy
 
+#IP and Port of the Nao
 NAO_IP = "10.20.4.61"
 PORT = 9559
 
+#Ensuring the Nao Robot can be connected to properly
+#Tries the varies different ALProxy methods used in code
 try:
     motionProxy = ALProxy("ALMotion", NAO_IP, PORT)
 except Exception, e:
@@ -33,25 +36,35 @@ except Exception, e:
     print "Error is", e
 else:
     postureProxy = ALProxy("ALRobotPosture", NAO_IP, PORT)
-    
+
+#Disables the autonomous life mode
 autolifeProxy.setState("disabled")
 
-
+#Sets the sleeptime between commands to zero
+#Sets speed of how fast robot moves from one position to another
 sleeptime = 0.0
 speed = 0.6
 
+
+#Method used to control robot
+#Takes in name of joint and the angle requested
 def move_arm(names, angles):
     
     motionProxy.setAngles(names, angles, speed)
     time.sleep(sleeptime)
     #print "%s: Input = %d || Output = %d\n" %(names, angles, speed)
 
+
+#Sets stiffness to zero and back to one in order to properly function
+#Setting angles doesn't work without these commands
 motionProxy.setStiffnesses("LArm", 0.0)
 motionProxy.setStiffnesses("RArm", 0.0)
 motionProxy.setStiffnesses("Body", 1.0)
 
+#Go to sitting position to set robot to predetermined position
 postureProxy.goToPosture("Sit" , 1.0)
 
+#Testing code for method
 #move_arm("RShoulderPitch", 2.0)
 #move_arm("RShoulderRoll", -0.1)
 #move_arm("RElbowRoll", -0.5)
@@ -59,55 +72,64 @@ postureProxy.goToPosture("Sit" , 1.0)
 #move_arm("RElbowYaw", -1.5)
 #move_arm("RElbowRoll", 1.0)
 
+
+#Setting serial port and baudrate for serial connection
 port = 'COM3'
 baudrate = 9600
 
+#Creating serial connection and flushing input
 teensy3 = serial.Serial(port,baudrate)
 teensy3.flushInput()
 
+#Reference Information
 # Shoulder Roll Range: -18 to 76 degrees (-.3142 to 1.3265 radians)
 # Shoulder Pitch Range: -119.5 to 119.5 degrees (-2.0857 to 2.0857 radians)
 # Elbow Yaw Range: -119.5 to 119.5 degrees (-2.0857 to 2.0857 radians)
 # Elbow Roll Range: -88.5 to -2 degrees (-1.5446 to -0.0349 radians)
 # Wrist Yaw Range: -104.5 to 104.5 degrees (-1.8238 to 1.8238 radians)
 
+#Always runs to ensure constant stream of information
 while True:
+    
+    #Checking if the serial connection is open
+    
     try:
         ser_bytes = teensy3.readline()
     except:
-        print("Keyboard Interrupt")
+        print("Error in serial connection")
         break
     else:
+    #Splitting the data into individual components
         ser_bytes = teensy3.readline()
-        print(ser_bytes)
         instruction_set = ser_bytes.split(" ")
-        print(instruction_set)
-        print(instruction_set[0])
-##        try:
-##            angle1 = float(instruction_set[0])
-##        except:
-##            angle1 = 0
-##        thread.start_new_thread(move_arm, ("LShoulderPitch", angle1))
-##        try:
-##            angle2 = float(instruction_set[1])
-##        except:
-##            angle2 = 0
-##        thread.start_new_thread(move_arm, ("LShoulderRoll", angle2))
-##        try:
-##            angle3 = float(instruction_set[2])
-##        except:
-##            angle3 = 0
-##            thread.start_new_thread(move_arm("LElbowRoll", angle3))
-##        try:
-##            angle4 = float(instruction_set[3])
-##        except:
-##            angle4 = 0
-##            thread.start_new_thread(move_arm("LElbowYaw", angle4))
-##        try:
-##            angle5 = float(instruction_set[4])
-##        except:
-##            angle5 = 0
-##            thread.start_new_thread(move_arm("LWristYaw", angle5))
+    #Try statements to ensure data isn't missing
+    #Replaces with zero if there is an issue with one of the potentiometers
+    #Creates a new thread in order to interpt multiple movement commands at once
+        try:
+            angle1 = float(instruction_set[0])
+        except:
+            angle1 = 0
+        thread.start_new_thread(move_arm, ("LShoulderPitch", angle1))
+        try:
+            angle2 = float(instruction_set[1])
+        except:
+            angle2 = 0
+        thread.start_new_thread(move_arm, ("LShoulderRoll", angle2))
+        try:
+            angle3 = float(instruction_set[2])
+        except:
+            angle3 = 0
+            thread.start_new_thread(move_arm("LElbowRoll", angle3))
+        try:
+            angle4 = float(instruction_set[3])
+        except:
+            angle4 = 0
+            thread.start_new_thread(move_arm("LElbowYaw", angle4))
+        try:
+            angle5 = float(instruction_set[4])
+        except:
+            angle5 = 0
+            thread.start_new_thread(move_arm("LWristYaw", angle5))
         try:
             angle6 = float(instruction_set[6])
         except:
