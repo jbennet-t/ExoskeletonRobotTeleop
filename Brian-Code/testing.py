@@ -7,7 +7,7 @@ import thread
 import serial
 from naoqi import ALProxy
 
-NAO_IP = "10.20.4.70"
+NAO_IP = "10.20.4.61"
 PORT = 9559
 
 try:
@@ -44,7 +44,7 @@ def move_arm(names, angles):
     
     motionProxy.setAngles(names, angles, speed)
     time.sleep(sleeptime)
-    print "%s: Input = %d || Output = %d\n" %(names, angles, speed)
+    #print "%s: Input = %d || Output = %d\n" %(names, angles, speed)
 
 motionProxy.setStiffnesses("LArm", 0.0)
 motionProxy.setStiffnesses("RArm", 0.0)
@@ -59,35 +59,79 @@ postureProxy.goToPosture("Sit" , 1.0)
 #move_arm("RElbowYaw", -1.5)
 #move_arm("RElbowRoll", 1.0)
 
+port = 'COM3'
+baudrate = 9600
 
-teensy3 = serial.Serial()
-teensy3.baudrate = 9600
-teensy3.port = 'COM5'
+teensy3 = serial.Serial(port,baudrate)
 teensy3.flushInput()
+
+# Shoulder Roll Range: -18 to 76 degrees (-.3142 to 1.3265 radians)
+# Shoulder Pitch Range: -119.5 to 119.5 degrees (-2.0857 to 2.0857 radians)
+# Elbow Yaw Range: -119.5 to 119.5 degrees (-2.0857 to 2.0857 radians)
+# Elbow Roll Range: -88.5 to -2 degrees (-1.5446 to -0.0349 radians)
+# Wrist Yaw Range: -104.5 to 104.5 degrees (-1.8238 to 1.8238 radians)
 
 while True:
     try:
-        ser_bytes = tennsy3.readline()
-        #decoded_bytes = float(ser_bytes[0:len(ser_bytes)-2].decode("utf-8"))
-        #print(decoded_bytes)
+        ser_bytes = teensy3.readline()
     except:
         print("Keyboard Interrupt")
         break
     else:
-        ser_bytes = tennsy3.readline()
-             if ser_bytes
-                    instruction_set = ser_bytes.split(";")
-                        if instruction_set
-                            thread.start_new_thread(move_arm("LShoulderPitch", instruction_set[0]))
-                            thread.start_new_thread(move_arm("LShoulderRoll", instruction_set[1]))
-                            thread.start_new_thread(move_arm("LElbowRoll", instruction_set[2]))
-                            thread.start_new_thread(move_arm("LElbowYaw", instruction_set[3]))
-                            thread.start_new_thread(move_arm("LWristYaw", instruction_set[4]))
-                            thread.start_new_thread(move_arm("RShoulderPitch", instruction_set[6]))
-                            thread.start_new_thread(move_arm("RShoulderRoll", instruction_set[7]))
-                            thread.start_new_thread(move_arm("RElbowRoll", instruction_set[8]))
-                            thread.start_new_thread(move_arm("RElbowYaw", instruction_set[9]))
-                            thread.start_new_thread(move_arm("RWristYaw", instruction_set[10]))
-
+        ser_bytes = teensy3.readline()
+        print(ser_bytes)
+        instruction_set = ser_bytes.split(" ")
+        print(instruction_set)
+        print(instruction_set[0])
+##        try:
+##            angle1 = float(instruction_set[0])
+##        except:
+##            angle1 = 0
+##        thread.start_new_thread(move_arm, ("LShoulderPitch", angle1))
+##        try:
+##            angle2 = float(instruction_set[1])
+##        except:
+##            angle2 = 0
+##        thread.start_new_thread(move_arm, ("LShoulderRoll", angle2))
+##        try:
+##            angle3 = float(instruction_set[2])
+##        except:
+##            angle3 = 0
+##            thread.start_new_thread(move_arm("LElbowRoll", angle3))
+##        try:
+##            angle4 = float(instruction_set[3])
+##        except:
+##            angle4 = 0
+##            thread.start_new_thread(move_arm("LElbowYaw", angle4))
+##        try:
+##            angle5 = float(instruction_set[4])
+##        except:
+##            angle5 = 0
+##            thread.start_new_thread(move_arm("LWristYaw", angle5))
+        try:
+            angle6 = float(instruction_set[6])
+        except:
+            angle6 = 0
+            thread.start_new_thread(move_arm("RShoulderPitch", angle6))
+        try:
+            angle7 = float(instruction_set[7])
+        except:
+            angle7 = 0
+            thread.start_new_thread(move_arm("RShoulderRoll", angle7))
+        try:
+            angle8 = float(instruction_set[8])
+        except:
+            angle8 = 0
+            thread.start_new_thread(move_arm("RElbowRoll", angle8))
+        try:
+            angle9 = float(instruction_set[9])
+        except:
+            angle9 = 0
+            thread.start_new_thread(move_arm("RElbowYaw", angle9))
+        try:
+            angle10 = float(instruction_set[10])
+        except:
+            angle10 = 0
+            thread.start_new_thread(move_arm("RWristYaw", angle10))
 
 
