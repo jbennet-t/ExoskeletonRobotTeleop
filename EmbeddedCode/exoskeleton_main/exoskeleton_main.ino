@@ -7,14 +7,14 @@
 #include <ResponsiveAnalogRead.h>
 
 //Left side
-const int potL1 = A14;  // analog pin used to connect the potentiometer
-const int potL2 = A15;
-const int potL3 = A16;
-const int potL4 = A17;
-const int potL5 = A18;
-const int potL6 = A19;
+const float potL1 = A14;  // analog pin used to connect the potentiometer
+const float potL2 = A15;
+const float potL3 = A16;
+const float potL4 = A17;
+const float potL5 = A18;
+const float potL6 = A19;
 
-int aL1, aL2, aL3, aL4, aL5, aL6;
+float aL1, aL2, aL3, aL4, aL5, aL6;
 
 //Right side 
 
@@ -87,21 +87,25 @@ void loop()
   aL5 = analogL5.getValue();
   aL6 = analogL6.getValue();
 
-  aL1 = map(aL1, 0, 8191, 0, 179); //maps 13 bit range to 0-180 angle range
-  aL2 = map(aL2, 0, 8191, 0, 180); 
-  aL3 = map(aL3, 0, 8191, 0, 180); 
-  aL4 = map(aL4, 0, 8191, 0, 180); 
-  aL5 = map(aL5, 0, 8191, 0, 180); 
-  aL6 = map(aL6, 0, 8191, 0, 180); 
- 
-  
-  Serial.print(aL1); Serial.print(",");
+  aL1 = map(aL1, 0, 8191, -2.0857, 2.0857)* -1; //maps 13 bit range to radian range for shoulder pitch
+  aL2 = map(aL2, 0, 8191, -0.3142, 1.3265)* -1; //shoulder roll
+  aL3 = map(aL3, 0, 8191, -2.0857, 2.0857)* -1; //elbow yaw
+  aL4 = map(aL4, 0, 8191, -1.5446, -0.0349)* -1; //elbow roll
+  aL5 = map(aL5, 0, 8191, -1.8238, 1.8238); //wrist yaw
+  aL6 = map(aL6, 0, 8191, -2.0857, 2.0857); //wrist roll - not used (for now)
+
+  Serial.print("0"); Serial.print(",");
+  Serial.print("0"); Serial.print(",");
+  Serial.print("-1"); Serial.print(",");
+  Serial.print("0"); Serial.print(",");
+  Serial.print("0"); Serial.print(",");
+  Serial.print("0"); Serial.print(",");
   Serial.print(aL2); Serial.print(",");
+  Serial.print(aL1); Serial.print(",");
   Serial.print(aL3); Serial.print(",");
   Serial.print(aL4); Serial.print(",");
   Serial.print(aL5); Serial.print(",");
-  Serial.print(aL6); Serial.print(";");
-  
+  Serial.print("0"); //Serial.print(",");
   
   //Serial.print(analogR1.getValue());
   
