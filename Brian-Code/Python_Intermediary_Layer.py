@@ -3,12 +3,12 @@ import sys
 import motion
 import time
 import argparse
-import thread
+import threading
 import serial
 from naoqi import ALProxy
 
 #IP and Port of the Nao
-NAO_IP = "192.168.1.206"
+NAO_IP = "10.20.4.61"
 PORT = 9559
 
 #Ensuring the Nao Robot can be connected to properly
@@ -65,8 +65,7 @@ postureProxy.goToPosture("Stand" , 1.0)
 
 
 #Setting serial port and baudrate for serial connection
-print("Pre-serial test okay")
-port = 'COM5'
+port = 'COM3'
 baudrate = 9600
 
 #Creating serial connection and flushing input
@@ -79,6 +78,8 @@ teensy3.flushInput()
 # Elbow Yaw Range: -119.5 to 119.5 degrees (-2.0857 to 2.0857 radians)
 # Elbow Roll Range: -88.5 to -2 degrees (-1.5446 to -0.0349 radians)
 # Wrist Yaw Range: -104.5 to 104.5 degrees (-1.8238 to 1.8238 radians)
+
+th1 = threading.Thread(target=move_arm, args = ("LShoulderPitch", angle1)
 
 #Always runs to ensure constant stream of information
 while True:
@@ -93,9 +94,7 @@ while True:
     else:
     #Splitting the data into individual components
         ser_bytes = teensy3.readline()
-        instruction_set = ser_bytes.split(",")
-        #print (ser_bytes)
-        #print (instruction_set)
+        instruction_set = ser_bytes.split(" ")
     #Try statements to ensure data isn't missing
     #Replaces with zero if there is an issue with one of the potentiometers
     #Creates a new thread in order to interpt multiple movement commands at once
@@ -103,49 +102,71 @@ while True:
             angle1 = float(instruction_set[0])
         except:
             angle1 = 0
-        thread.start_new_thread(move_arm, ("LShoulderPitch", angle1))
+        th1 = threading.Thread(target=move_arm, args = ("LShoulderPitch", angle1))
+        th1.start()
+        #thread.start_new_thread(move_arm, ("LShoulderPitch", angle1))
         try:
             angle2 = float(instruction_set[1])
         except:
             angle2 = 0
-        thread.start_new_thread(move_arm, ("LShoulderRoll", angle2))
+        #thread.start_new_thread(move_arm, ("LShoulderRoll", angle2))
+        th2 = threading.Thread(target=move_arm, args = ("LShoulderRoll", angle2))
+        th2.start()
         try:
             angle3 = float(instruction_set[2])
         except:
-            angle3 = -1
-        thread.start_new_thread(move_arm, ("LElbowRoll", angle3))
+            angle3 = 0
+        #thread.start_new_thread(move_arm("LElbowRoll", angle3))
+        th3 = threading.Thread(target=move_arm, args = ("LElbowRoll", angle3))
+        th3.start()
         try:
             angle4 = float(instruction_set[3])
         except:
             angle4 = 0
-        thread.start_new_thread(move_arm, ("LElbowYaw", angle4))
+        #thread.start_new_thread(move_arm("LElbowYaw", angle4))
+        th4 = threading.Thread(target=move_arm, args = ("LElbowYaw", angle4))
+        th4.start()
         try:
             angle5 = float(instruction_set[4])
         except:
             angle5 = 0
-        thread.start_new_thread(move_arm, ("LWristYaw", angle5))
+        #thread.start_new_thread(move_arm("LWristYaw", angle5))
+        th5 = threading.Thread(target=move_arm, args = ("LWristYaw", angle5))
+        th5.start()
         try:
-          angle6 = float(instruction_set[6])
+            angle6 = float(instruction_set[6])
         except:
             angle6 = 0
-        thread.start_new_thread(move_arm, ("RShoulderPitch", angle6))
+        #thread.start_new_thread(move_arm("RShoulderPitch", angle6))
+        th6 = threading.Thread(target=move_arm, args = ("RShoulderPitch", angle6))
+        th6.start()
         try:
             angle7 = float(instruction_set[7])
         except:
             angle7 = 0
-        thread.start_new_thread(move_arm, ("RShoulderRoll", angle7))
+        #thread.start_new_thread(move_arm("RShoulderRoll", angle7))
+        th7 = threading.Thread(target=move_arm, args = ("RShoulderRoll", angle7))
+        th7.start()
         try:
             angle8 = float(instruction_set[8])
         except:
-            angle8 = -1
-        thread.start_new_thread(move_arm, ("RElbowRoll", angle8))
+            angle8 = 0
+        #thread.start_new_thread(move_arm("RElbowRoll", angle8))
+        th8 = threading.Thread(target=move_arm, args = ("RElbowRoll", angle8))
+        th8.start()
         try:
             angle9 = float(instruction_set[9])
         except:
             angle9 = 0
-        thread.start_new_thread(move_arm, ("RElbowYaw", angle9))
+        #thread.start_new_thread(move_arm("RElbowYaw", angle9))
+        th9 = threading.Thread(target=move_arm, args = ("RElbowYaw", angle9))
+        th9.start()
         try:
             angle10 = float(instruction_set[10])
         except:
             angle10 = 0
-        thread.start_new_thread(move_arm, ("RWristYaw", angle10))
+        #thread.start_new_thread(move_arm("RWristYaw", angle10))
+        th10 = threading.Thread(target=move_arm, args = ("RWristYaw", angle10))
+        th10.start()
+
+
