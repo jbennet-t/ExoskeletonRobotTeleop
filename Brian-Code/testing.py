@@ -8,7 +8,7 @@ import serial
 from naoqi import ALProxy
 
 #IP and Port of the Nao
-NAO_IP = "192.168.1.206"
+NAO_IP = "192.168.1.149"
 PORT = 9559
 
 #Ensuring the Nao Robot can be connected to properly
@@ -66,7 +66,7 @@ postureProxy.goToPosture("Stand" , 1.0)
 
 #Setting serial port and baudrate for serial connection
 print("Pre-serial test okay")
-port = 'COM5'
+port = 'COM3'
 baudrate = 9600
 
 #Creating serial connection and flushing input
