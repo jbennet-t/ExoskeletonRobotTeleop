@@ -43,7 +43,7 @@ autolifeProxy.setState("disabled")
 #Sets the sleeptime between commands to zero
 #Sets speed of how fast robot moves from one position to another
 sleeptime = 0.0
-speed = 0.6
+speed = 0.9
 
 
 #Method used to control robot
@@ -80,8 +80,69 @@ teensy3.flushInput() """
 # Elbow Roll Range: -88.5 to -2 degrees (-1.5446 to -0.0349 radians)
 # Wrist Yaw Range: -104.5 to 104.5 degrees (-1.8238 to 1.8238 radians)
 
-while True:
+move_arm("LShoulderPitch", -.3142)
+time.sleep(1)
+move_arm("LShoulderPitch", 1.3265)
+time.sleep(1)
+move_arm("LShoulderPitch", 0)
+time.sleep(1)
+move_arm("LShoulderRoll", -2.0857)
+time.sleep(1)
+move_arm("LShoulderRoll", 2.0857)
+time.sleep(1)
+move_arm("LShoulderRoll", 0)
+time.sleep(1)
+move_arm("LElbowRoll", -1.5446)
+time.sleep(1)
+move_arm("LElbowRoll", -0.0349)
+time.sleep(1)
+move_arm("LElbowRoll", 0)
+time.sleep(1)
+move_arm("LElbowYaw", -2.0857)
+time.sleep(1)
+move_arm("LElbowYaw", 2.0857)
+time.sleep(1)
+move_arm("LWristYaw", -1.8238)
+time.sleep(1)
+move_arm("LWristYaw", 1.8238)
+time.sleep(1)
+move_arm("LWristYaw", 0)
+time.sleep(1)
 
+postureProxy.goToPosture("Stand" , 1.0)
+
+move_arm("RShoulderPitch", -.3142)
+time.sleep(1)
+move_arm("RShoulderPitch", 1.3265)
+time.sleep(1)
+move_arm("RShoulderPitch", 0)
+time.sleep(1)
+move_arm("RShoulderRoll", -2.0857)
+time.sleep(1)
+move_arm("RShoulderRoll", 2.0857)
+time.sleep(1)
+move_arm("RShoulderRoll", 0)
+time.sleep(1)
+move_arm("RElbowRoll", -1.5446)
+time.sleep(1)
+move_arm("RElbowRoll", -0.0349)
+time.sleep(1)
+move_arm("RElbowRoll", 0)
+time.sleep(1)
+move_arm("RElbowYaw", -2.0857)
+time.sleep(1)
+move_arm("RElbowYaw", 2.0857)
+time.sleep(1)
+move_arm("RWristYaw", -1.8238)
+time.sleep(1)
+move_arm("RWristYaw", 1.8238)
+time.sleep(1)
+move_arm("RWristYaw", 0)
+time.sleep(1)
+
+postureProxy.goToPosture("Stand" , 1.0)
+
+#while True:
 
 
 """ #Always runs to ensure constant stream of information

@@ -8,7 +8,7 @@ import serial
 from naoqi import ALProxy
 
 #IP and Port of the Nao
-NAO_IP = "10.20.4.61"
+NAO_IP = "192.168.1.149"
 PORT = 9559
 
 #Ensuring the Nao Robot can be connected to properly
@@ -79,7 +79,6 @@ teensy3.flushInput()
 # Elbow Roll Range: -88.5 to -2 degrees (-1.5446 to -0.0349 radians)
 # Wrist Yaw Range: -104.5 to 104.5 degrees (-1.8238 to 1.8238 radians)
 
-th1 = threading.Thread(target=move_arm, args = ("LShoulderPitch", angle1)
 
 #Always runs to ensure constant stream of information
 while True:
