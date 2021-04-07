@@ -112,6 +112,8 @@ while True:
             angle1 = 0
 ##        th1 = threading.Thread(target=move_arm, args = ("LShoulderPitch", angle1))
 ##        th1.start()
+        th1 = Process(target = move_arm, args = ("LShoulderPitch", angle1))
+        th1.start()
         #thread.start_new_thread(move_arm, ("LShoulderPitch", angle1))
         try:
             angle2 = float(instruction_set[1])
@@ -120,6 +122,8 @@ while True:
         #thread.start_new_thread(move_arm, ("LShoulderRoll", angle2))
 ##        th2 = threading.Thread(target=move_arm, args = ("LShoulderRoll", angle2))
 ##        th2.start()
+        th2 = Process(target = move_arm, args = ("LShoulderRoll", angle2))
+        th2.start()
         try:
             angle3 = float(instruction_set[2])
         except:
@@ -127,6 +131,8 @@ while True:
         #thread.start_new_thread(move_arm, ("LElbowRoll", angle3))
 ##        th3 = threading.Thread(target=move_arm, args = ("LElbowRoll", angle3))
 ##        th3.start()
+        th3 = Process(target = move_arm, args = ("LElbowRoll", angle3))
+        th3.start()
         try:
             angle4 = float(instruction_set[3])
         except:
@@ -134,6 +140,8 @@ while True:
         #thread.start_new_thread(move_arm, ("LElbowYaw", angle4))
 ##        th4 = threading.Thread(target=move_arm, args = ("LElbowYaw", angle4))
 ##        th4.start()
+        th4 = Process(target = move_arm, args = ("LElbowYaw", angle4))
+        th4.start()
         try:
             angle5 = float(instruction_set[4])
         except:
@@ -141,6 +149,8 @@ while True:
         #thread.start_new_thread(move_arm, ("LWristYaw", angle5))
 ##        th5 = threading.Thread(target=move_arm, args = ("LWristYaw", angle5))
 ##        th5.start()
+        th5 = Process(target = move_arm, args = ("LWristYaw", angle5))
+        th5.start()
         try:
           angle6 = float(instruction_set[6])
         except:
@@ -148,6 +158,8 @@ while True:
         #thread.start_new_thread(move_arm, ("RShoulderPitch", angle6))
 ##        th6 = threading.Thread(target=move_arm, args = ("RShoulderPitch", angle6))
 ##        th6.start()
+        th6 = Process(target = move_arm, args = ("RShoulderPitch", angle6))
+        th6.start()
         try:
             angle7 = float(instruction_set[7])
         except:
@@ -155,6 +167,8 @@ while True:
         #thread.start_new_thread(move_arm, ("RShoulderRoll", angle7))
 ##        th7 = threading.Thread(target=move_arm, args = ("RShoulderRoll", angle7))
 ##        th7.start()
+        th7 = Process(target = move_arm, args = ("RShoulderRoll", angle7))
+        th7.start()
         try:
             angle8 = float(instruction_set[8])
         except:
@@ -162,6 +176,8 @@ while True:
         #thread.start_new_thread(move_arm, ("RElbowRoll", angle8))
 ##        th8 = threading.Thread(target=move_arm, args = ("RElbowRoll", angle8))
 ##        th8.start()
+        th8 = Process(target = move_arm, args = ("RElbowRoll", angle8))
+        th8.start()
         try:
             angle9 = float(instruction_set[9])
         except:
@@ -169,11 +185,15 @@ while True:
         #thread.start_new_thread(move_arm, ("RElbowYaw", angle9))
 ##        th9 = threading.Thread(target=move_arm, args = ("RElbowYaw", angle9))
 ##        th9.start()
+        th9 = Process(target = move_arm, args = ("RElbowYaw", angle9))
+        th9.start()
         try:
             angle10 = float(instruction_set[10])
         except:
             angle10 = 0
         #thread.start_new_thread(move_arm, ("RWristYaw", angle10))
 ##        th10 = threading.Thread(target=move_arm, args = ("RWristYaw", angle10))
-##        th9.start()
+##        th10.start()
+        th10 = Process(target = move_arm, args = ("RWristYaw", angle10))
+        th10.start()
 
