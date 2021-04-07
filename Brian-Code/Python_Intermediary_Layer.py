@@ -43,7 +43,7 @@ autolifeProxy.setState("disabled")
 #Sets the sleeptime between commands to zero
 #Sets speed of how fast robot moves from one position to another
 sleeptime = 0.0
-speed = 0.8
+speed = 1.0
 
 
 #Method used to control robot
@@ -66,7 +66,7 @@ postureProxy.goToPosture("Stand" , 1.0)
 
 #Setting serial port and baudrate for serial connection
 print("Pre-serial test okay")
-port = 'COM3'
+port = 'COM4'
 baudrate = 9600
 
 #Creating serial connection and flushing input
