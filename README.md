@@ -4,6 +4,8 @@ Developed by Jordan Sinoway and Brian Dawson for 2021 Senior Capstone Project @ 
 
 Exoskeleton embedded and Python code developed for Teensy 3.5 and NAO v4 robot, however could easily be reapplied to a new microcontroller and robot. Would suggest not using the NAO in the future due to reliability issues. 
 
+This project is free to build and improve upon.
+
 If you have any questions about the project, feel free to contact me.
 
 ## Exoskeleton Overview Model
@@ -20,7 +22,6 @@ The goal of this project is to create a novel exoskeleton apparatus that capture
 - Exoskeleton_main.ino https://github.com/jbennet-t/ExoskeletonRobotTeleop/blob/master/EmbeddedCode/exoskeleton_main/exoskeleton_main.ino
 - Everything in the Exoskeleton_Models subdirectory (all stls are not up to date, should be regenerated)
 - Exoskeleton_PCBv3: https://github.com/jbennet-t/ExoskeletonRobotTeleop/tree/master/PCB/Exoskeleton_PCBv3
-- 
 
 ### Materials List
 Items required: (Approximate Cost ~$250)
@@ -39,5 +40,7 @@ Items required: (Approximate Cost ~$250)
 - 22 AWG Silicone Wire 40ft (x1)
 - 3D Printed Components
 - Printed Circuit Board
+- Power Supply
+- Laptop
 
 
