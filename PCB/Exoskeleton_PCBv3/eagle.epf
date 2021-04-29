@@ -274,6 +274,7 @@ UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/3SP_CO_1000.lbr"
 UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/5013.lbr"
 UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/A101SYCQ04.lbr"
 UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/HDC2010YPAR.lbr"
+UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/LD1117AV33.lbr"
 UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/LM1085IT-5.0.lbr"
 UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/LMP91000SDX_NOPB.lbr"
 UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/MS860702BA01-50.lbr"
@@ -287,8 +288,8 @@ UsedLibrary="C:/Users/sinow/Documents/EAGLE/libraries/cherrymx.lbr"
 [Win_1]
 Type="Schematic Editor"
 Number=2
-File="Exoskeleton_PCB_v1.sch"
-View="99.2678 72.2243 262.23 184.469"
+File="Exoskeleton_PCB_v2.sch"
+View="-5.73116 -4.10556 265.873 182.968"
 WireWidths=" 0.0762 0.1016 0.127 0.15 0.2 0.2032 0.254 0.3048 0.4064 0.508 0.6096 0.8128 1.016 1.27 2.54 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.65 0.7 0.75 0.8 0.85 0.9 1 0.6"
@@ -327,14 +328,13 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: 99.2678 72.2243 262.23 184.469"
 Sheet="1"
 
 [Win_2]
 Type="Board Editor"
 Number=1
-File="Exoskeleton_PCB_v1.brd"
-View="17.6562 -9.93685 80.1047 53.6123"
+File="Exoskeleton_PCB_v2.brd"
+View="-7.49085 -37.8386 82.4348 53.6721"
 WireWidths=" 0.0762 0.1016 0.127 0.15 0.2 0.2032 0.254 0.3048 0.4064 0.508 0.6096 0.8128 1.016 1.27 2.54 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.65 0.7 0.75 0.8 0.85 0.9 1 0.6"

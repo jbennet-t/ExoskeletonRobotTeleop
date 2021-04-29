@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2021-02-21T05:17:41Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Exoskeleton_PCB_v2"
+        },
+        "Owner": "Jordan Sinoway <sinowaj1@tcnj.edu>",
+        "Size": {
+            "X": 62.9974,
+            "Y": 73.1522
+        }
+    }
+}

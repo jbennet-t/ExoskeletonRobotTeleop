@@ -66,7 +66,7 @@ postureProxy.goToPosture("Stand" , 1.0)
 
 #Setting serial port and baudrate for serial connection
 print("Pre-serial test okay")
-port = 'COM4'
+port = 'COM3'
 baudrate = 9600
 
 #Creating serial connection and flushing input
